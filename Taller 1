@@ -1,0 +1,30 @@
+import javax.swing.JOptionPane;
+
+public class Persona {
+	
+	public static void main(String[] args) {
+	       
+	        //----------------VARIABLES---------------
+	        double p,e,imc;
+	        String p1,e1;
+	        //----------------ENTRADAS----------------
+	        p1 = JOptionPane.showInputDialog("Cual es su peso ");
+	        p = Double.parseDouble(p1);
+	        e1 = JOptionPane.showInputDialog("Cual es tu estatura");
+	        e = Double.parseDouble(e1);
+	        //----------------CALCULO----------------
+	        imc= p/(e*e);
+	        JOptionPane.showMessageDialog(null, "SU IMC ES: "+imc);
+	        //--------SITUACION IMC POR PERSONA-------    
+	        if (imc<18.5) {
+	            JOptionPane.showMessageDialog(null, "BAJO PESO");
+	        } else if (imc>=18.5 && imc<=24.9) {
+	            JOptionPane.showMessageDialog(null, "NORMAL");
+	        } else if (imc>=25 && imc<=29.9) {
+	            JOptionPane.showMessageDialog(null, "SOBREPESO");
+	        } else {
+	            JOptionPane.showMessageDialog(null, "OBESIDAD");
+	        }
+	}
+	 
+}
